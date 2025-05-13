@@ -42,11 +42,7 @@ class UserNotFoundError(Exception):
         super().__init__(f"Пользователь '{username}' не найден.")
 
 
-
-
-
-# Основная функция
-def main():
+if __name__ == "__main__":
     manager = UserManager()
 
     users_to_add = [
@@ -80,7 +76,3 @@ def main():
             print(f"Найден пользователь: {user}")
         except UserNotFoundError as e:
             print(f"Ошибка поиска: {e}")
-
-
-if __name__ == "__main__":
-    main()
